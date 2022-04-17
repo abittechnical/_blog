@@ -1,7 +1,7 @@
 export const readingTime = content => {
   const WPS = 275 / 60
 
-  var images = 0
+  let images = 0
   const regex = /\w/
 
   let words = content.split(' ').filter(word => {
@@ -11,9 +11,9 @@ export const readingTime = content => {
     return regex.test(word)
   }).length
 
-  var imageAdjust = images * 4
-  var imageSecs = 0
-  var imageFactor = 12
+  const imageAdjust = images * 4
+  let imageSecs = 0
+  let imageFactor = 12
 
   while (images) {
     imageSecs += imageFactor
