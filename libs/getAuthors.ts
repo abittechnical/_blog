@@ -6,7 +6,7 @@ const authorDirFiles = fs.readdirSync(path.join('content/author'))
 const authors = authorDirFiles.filter(f => f.includes('.md'))
 
 export function getAuthors() {
-  const returnDirFiles = authors.map(filename => {
+  return authors.map(filename => {
     const authorSlug = filename.replace('.md', '')
     const dirFileContents = fs.readFileSync(
       path.join('content/author', filename),
@@ -20,5 +20,4 @@ export function getAuthors() {
       authorContent: content,
     }
   })
-  return returnDirFiles
 }

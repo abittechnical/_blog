@@ -56,7 +56,7 @@ export default function Footer() {
                         <input
                           type="text"
                           name={subscription.mailChimpFormName}
-                          tabIndex="-1"
+                          tabIndex={-1}
                         />
                       </div>
                       <div className="input-group-append d-flex d-sm-inline-block mt-2 mt-sm-0 ms-0 w-auto">

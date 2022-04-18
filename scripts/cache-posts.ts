@@ -1,12 +1,12 @@
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 function blogData() {
   const blogDirFiles = fs.readdirSync(path.join('content/blog'))
   const blogs = blogDirFiles.filter(f => f.includes('.md'))
 
-  posts = blogs.map(filename => {
+  const posts = blogs.map(filename => {
     const slug = filename.replace('.md', '')
     const dirFileContents = fs.readFileSync(
       path.join('content/blog', filename),
@@ -30,7 +30,7 @@ try {
   fs.mkdirSync('cache')
 }
 
-fs.writeFile('cache/data.js', blogData(), function (err) {
+fs.writeFile('cache/data.ts', blogData(), function (err) {
   if (err) return console.log(err)
   console.log('Blog Posts Cache Complete')
 })

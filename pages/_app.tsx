@@ -1,10 +1,10 @@
 import '@/styles/bootstrap.scss'
 import '@/styles/globals.scss'
 import { useState, useEffect } from 'react'
-import { AppContext } from '@/components/UseContext'
+import { AppContext } from '@/hooks'
 
-export default function QurnoApp({ Component, pageProps }) {
-  const [searchOpen, setSearchOpen] = useState('')
+const BlogApp = ({ Component, pageProps }) => {
+  const [searchOpen, setSearchOpen] = useState(false)
 
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap')
@@ -20,3 +20,5 @@ export default function QurnoApp({ Component, pageProps }) {
     </AppContext.Provider>
   )
 }
+
+export default BlogApp

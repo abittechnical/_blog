@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { formatDate } from '@/utils/formatDate'
 import { IconX } from '@tabler/icons'
 import { useEffect, useState, useContext } from 'react'
-import { AppContext } from '@/components/UseContext'
+import { AppContext } from '@/hooks'
 import { posts } from '../cache/data'
 
 export default function Search() {

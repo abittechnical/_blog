@@ -4,6 +4,13 @@ import Footer from '@/components/Footer'
 import useScripts from '@/components/Scripts'
 import siteConfig from '@/config/site.config.json'
 
+type LayoutProps = {
+  metaTitle?: string
+  metaDescription?: string
+  metaAuthor?: string
+  metaKeyword?: string
+  ogImage?: string
+}
 export default function Layout({
   metaTitle,
   metaDescription,

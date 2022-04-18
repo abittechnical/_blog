@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const useScript = (url, position, async) => {
+const useScripts = (url, position, async) => {
   useEffect(() => {
     const placement = document.querySelector(position)
     const script = document.createElement('script')
@@ -13,4 +13,4 @@ const useScript = (url, position, async) => {
   }, [url])
 }
 
-export default useScript
+export default useScripts

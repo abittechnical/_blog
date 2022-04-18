@@ -1,4 +1,4 @@
-import { AppContext } from '@/components/UseContext'
+import { AppContext } from '@/hooks'
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from 'react'
 import Link from 'next/link'
